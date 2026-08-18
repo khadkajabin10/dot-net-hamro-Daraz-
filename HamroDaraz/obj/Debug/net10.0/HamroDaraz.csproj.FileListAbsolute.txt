@@ -154,7 +154,6 @@ D:\programming related\c# project\HamroDaraz\HamroDaraz\obj\Debug\net10.0\rjsmcs
 D:\programming related\c# project\HamroDaraz\HamroDaraz\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\programming related\c# project\HamroDaraz\HamroDaraz\obj\Debug\net10.0\scopedcss\bundle\HamroDaraz.styles.css
 D:\programming related\c# project\HamroDaraz\HamroDaraz\obj\Debug\net10.0\scopedcss\projectbundle\HamroDaraz.bundle.scp.css
-D:\programming related\c# project\HamroDaraz\HamroDaraz\obj\Debug\net10.0\compressed\cjx934rtmv-{0}-b9sayid5wm-b9sayid5wm.gz
 D:\programming related\c# project\HamroDaraz\HamroDaraz\obj\Debug\net10.0\compressed\u7xct4g22q-{0}-61n19gt1b8-61n19gt1b8.gz
 D:\programming related\c# project\HamroDaraz\HamroDaraz\obj\Debug\net10.0\compressed\dss90sbofo-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 D:\programming related\c# project\HamroDaraz\HamroDaraz\obj\Debug\net10.0\compressed\44ip2ecvnr-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -230,3 +229,5 @@ D:\programming related\c# project\HamroDaraz\HamroDaraz\obj\Debug\net10.0\refint
 D:\programming related\c# project\HamroDaraz\HamroDaraz\obj\Debug\net10.0\HamroDaraz.pdb
 D:\programming related\c# project\HamroDaraz\HamroDaraz\obj\Debug\net10.0\HamroDaraz.genruntimeconfig.cache
 D:\programming related\c# project\HamroDaraz\HamroDaraz\obj\Debug\net10.0\ref\HamroDaraz.dll
+D:\programming related\c# project\HamroDaraz\HamroDaraz\obj\Debug\net10.0\HamroDaraz.sourcelink.json
+D:\programming related\c# project\HamroDaraz\HamroDaraz\obj\Debug\net10.0\compressed\cjx934rtmv-{0}-rpb4asa25l-rpb4asa25l.gz
