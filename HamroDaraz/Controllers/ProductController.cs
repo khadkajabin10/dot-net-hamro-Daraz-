@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using HamroDaraz.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 public class ProductController : Controller
 {
@@ -39,6 +40,7 @@ public class ProductController : Controller
     // GET: PRODUCTS/Create
     public IActionResult Create()
     {
+        ViewData["CategoryId"] = new SelectList(_context.Category, "Id", "Name");
         return View();
     }
 
@@ -47,14 +49,20 @@ public class ProductController : Controller
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create([Bind("Id,Title,Description,Price,ProductIcon,CategoryId,Category")] Product product)
+    public async Task<IActionResult> Create([Bind("Id,Title,Description,Price,ProductIcon,CategoryId,Category")] Product product,IFormFile Photo)
     {
         if (ModelState.IsValid)
         {
+            string path = Environment.CurrentDirectory + "/wwwroot/ProductImage";
+            string name = Photo.FileName;
+            FileStream fs = new FileStream(path + name, FileMode.Create);
+            await Photo.CopyToAsync(fs);
+            product.ProductIcon = "ProductImage/" + name;
             _context.Add(product);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        ViewData["CategoryId"] = new SelectList(_context.Category, "Id", "Name",product.CategoryId);
         return View(product);
     }
 

@@ -230,4 +230,4 @@ D:\programming related\c# project\HamroDaraz\HamroDaraz\obj\Debug\net10.0\HamroD
 D:\programming related\c# project\HamroDaraz\HamroDaraz\obj\Debug\net10.0\HamroDaraz.genruntimeconfig.cache
 D:\programming related\c# project\HamroDaraz\HamroDaraz\obj\Debug\net10.0\ref\HamroDaraz.dll
 D:\programming related\c# project\HamroDaraz\HamroDaraz\obj\Debug\net10.0\HamroDaraz.sourcelink.json
-D:\programming related\c# project\HamroDaraz\HamroDaraz\obj\Debug\net10.0\compressed\cjx934rtmv-{0}-rpb4asa25l-rpb4asa25l.gz
+D:\programming related\c# project\HamroDaraz\HamroDaraz\obj\Debug\net10.0\compressed\cjx934rtmv-{0}-ffnl7cxu5y-ffnl7cxu5y.gz
