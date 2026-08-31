@@ -61,8 +61,8 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\ProductImageappliance-instructions.png
-wwwroot\ProductImagemobile-logo.png
+wwwroot\ProductImage\2-slot-toaster-white.jpg
+wwwroot\ProductImage\3-piece-cooking-set.jpg
 D:\programming related\c# project\HamroDaraz\HamroDaraz\wwwroot\css\site.css
 D:\programming related\c# project\HamroDaraz\HamroDaraz\wwwroot\favicon.ico
 D:\programming related\c# project\HamroDaraz\HamroDaraz\wwwroot\js\site.js

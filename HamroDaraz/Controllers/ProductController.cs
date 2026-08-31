@@ -16,7 +16,19 @@ public class ProductController : Controller
     // GET: PRODUCTS
     public async Task<IActionResult> Index()    
     {
-        return View(await _context.Product.ToListAsync());
+        var products = await _context.Product
+       .Include(p => p.Category) // ✅ load category data
+       .ToListAsync();
+
+        return View(products);
+    }
+    public async Task<IActionResult> ProductDashBoard()
+    {
+        var products = await _context.Product
+       .Include(p => p.Category) // ✅ load category data
+       .ToListAsync();
+
+        return View(products);
     }
 
     // GET: PRODUCTS/Details/5
@@ -55,7 +67,7 @@ public class ProductController : Controller
         {
             string path = Environment.CurrentDirectory + "/wwwroot/ProductImage";
             string name = Photo.FileName;
-            FileStream fs = new FileStream(path + name, FileMode.Create);
+            FileStream fs = new FileStream(path + "/" + name, FileMode.Create);
             await Photo.CopyToAsync(fs);
             product.ProductIcon = "ProductImage/" + name;
             _context.Add(product);
