@@ -5,4 +5,5 @@ public class HamroDarazContext(DbContextOptions<HamroDarazContext> options) : Db
 {
     public DbSet<HamroDaraz.Models.Category> Category { get; set; } = default!;
     public DbSet<Product> Product { get; set; } = default!;
+    public DbSet<HamroDaraz.Models.User>User { get; set; } = default!;
 }

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HamroDaraz")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76056f09941fa2ecb1f0958d3ae25d9f3a3e1ace")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c09cda9afb390acd5f67d4ae8ad886c51efe4124")]
 [assembly: System.Reflection.AssemblyProductAttribute("HamroDaraz")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HamroDaraz")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
