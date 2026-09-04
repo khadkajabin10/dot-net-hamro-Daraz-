@@ -67,15 +67,29 @@ public class UserController : Controller
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Register([Bind("Id,Username,Password")] User user)
+    public async Task<IActionResult> Register([Bind(",Username,Password")] RegisterViewModel rvm)
     {
         if (ModelState.IsValid)
         {
-            _context.Add(user);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            // var users = (from u in _context.User where u.Username = rvm.Username select u).toList();
+            var users = (from u in _context.User
+                         where u.Username == rvm.Username
+                         select u).ToList();
+            if (users.Count > 0)
+            {
+                ViewData["ErrorMessage"] = "User has already exist";
+            }
+            else
+            {
+                User user = new User();
+                user.Username = rvm.Username;
+                user.Password = rvm.Password;
+                _context.Add(user);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
         }
-        return View(user);
+        return View(rvm);
     }
     public IActionResult Login()
     {
