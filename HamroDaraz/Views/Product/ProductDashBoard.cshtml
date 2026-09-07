@@ -8,12 +8,15 @@
 
 <p>
     <a asp-action="Create">Create New</a>
-    <form asp-action="ProductDashBoard" >
-        Search:
-        <input type="text"  />
-        <input type="submit" value="Search"/>
-    </form>
+   
 </p>
+
+<form asp-action="ProductDashBoard">
+    Search:
+    <input type="text" name="Title" />
+    <input type="submit" value="Search" />
+</form>
+<br />
 <table class="table">
 
     <tbody>

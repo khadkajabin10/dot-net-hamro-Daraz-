@@ -1,4 +1,4 @@
-@model HamroDaraz.Models.User
+@model HamroDaraz.Models.RegisterViewModel
 
 @{
     ViewData["Title"] = "Login";
@@ -10,7 +10,9 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
+
         <form asp-action="Login">
+            <p style="color:red">@ViewData["ErrorMessage"]</p>
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
             <div class="form-group">
@@ -24,6 +26,7 @@
                 <input asp-for="Password" class="form-control" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <input type="submit" value="Login" class="btn btn-primary" />
             </div>
@@ -31,6 +34,3 @@
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>

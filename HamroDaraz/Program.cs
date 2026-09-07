@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("HamroDarazContext") ?? throw new InvalidOperationException("Connection string 'HamroDarazContext' not found.");
@@ -6,6 +7,8 @@ builder.Services.AddDbContext<HamroDarazContext>(options => options.UseSqlServer
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+        .AddCookie(options => options.LoginPath = new PathString("/User/Login"));
 
 var app = builder.Build();
 
@@ -19,6 +22,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
+app.UseAuthentication();
 
 app.UseAuthorization();
 

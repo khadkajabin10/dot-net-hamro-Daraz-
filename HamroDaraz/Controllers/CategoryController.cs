@@ -2,7 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using HamroDaraz.Models;
-
+using Microsoft.AspNetCore.Authorization;
+[Authorize]
 public class CategoryController : Controller
 {
     private readonly HamroDarazContext _context;

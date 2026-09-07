@@ -3,7 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using HamroDaraz.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
-
+using Microsoft.AspNetCore.Authorization;
+[Authorize]
 public class ProductController : Controller
 {
     private readonly HamroDarazContext _context;
@@ -22,13 +23,24 @@ public class ProductController : Controller
 
         return View(products);
     }
-    public async Task<IActionResult> ProductDashBoard()
+    [AllowAnonymous]
+    public async Task<IActionResult> ProductDashBoard(string? Title)
     {
-        var products = await _context.Product
-       .Include(p => p.Category) // ✅ load category data
-       .ToListAsync();
+        if (!string.IsNullOrEmpty(Title))
+        {
+            var hamroDarazContext = _context.Product.Include(p => p.Category)
+                .Where(p => p.Title.Contains(Title));
+            return View(await hamroDarazContext.ToListAsync());
+        }
+        else
+        {
+            var products = await _context.Product
+           .Include(p => p.Category) // ✅ load category data
+           .ToListAsync();
+            return View(products);
+        }
 
-        return View(products);
+       
     }
 
     // GET: PRODUCTS/Details/5
